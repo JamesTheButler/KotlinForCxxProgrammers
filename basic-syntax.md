@@ -36,6 +36,26 @@ int sum(int a, int b)
   return a + b;        //Semi-colon deliminting a statement
 }
 ```
+### Common Cases for Semi Colons
+It is worth noting that semi-colons may still be required.
+Some common cases include:
+- Enum Classes
+```kotlin
+enum class MyEnum {
+  ENUM_A,
+  ENUM_B; 
+  // Semi-colon required, as we are adding a function below the list of enum values. 
+  //  We must therefore delimit the list. Otherwise this is not necessary.
+  
+  fun someFunction() {  }
+}
+```
+- Multiple expressions in one line
+```kotlin
+fun main() {
+    var a = 5; var b = 10 // Semi-colon required to separate two expressions in one line
+}
+```
 
 ## Program entry point
 
